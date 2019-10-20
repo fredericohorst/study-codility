@@ -23,25 +23,3 @@ def solution(A):
 A = [3,1,2,4,3]
 
 print(solution(A))
-
-print(A[0])
-print(sum(A))
-# #
-# n = len(A)
-# i = 1
-# #
-# left = sum(A[:i])
-# right = sum(A[i:n])
-# diff = abs(left-right)
-# #
-# # print(A[:i])
-# # print(A[i:n])
-# #
-# print(left)
-# print(right)
-# print(diff)
-# #
-#
-#
-#
-#
