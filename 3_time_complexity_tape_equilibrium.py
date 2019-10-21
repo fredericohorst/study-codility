@@ -4,20 +4,16 @@
 # source: https://app.codility.com/programmers/lessons/3-time_complexity/tape_equilibrium/
 
 def solution(A):
-    n = len(A)
-    i = 1
-    diff = []
-    # values = []
-    while i <= n:
-        left = sum(A[:i])
-        right = sum(A[i:n])
-        # values.append(i)
-        diff.append(abs(left-right))
-        if i > n:
-            break
-        i += 1
-    # return values[diff.index(min(diff))]
-    return min(diff)
+    sum_left = A[0]
+    sum_right = sum(A)-A[0]
+    diff = abs(sum_left - sum_right)
+    for i in range(1, len(A)-1):
+        sum_left += A[i]
+        sum_right -= A[i]
+        current_diff = abs(sum_left - sum_right)
+        if diff > current_diff:
+            diff = current_diff
+    return diff
 
 
 A = [3,1,2,4,3]
