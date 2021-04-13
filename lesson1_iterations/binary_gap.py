@@ -5,5 +5,5 @@
 
 
 def solution(N):
-
+    pass
 
