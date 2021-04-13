@@ -6,8 +6,6 @@ def solution(A):
         act_sum += number # same of using sum(A)
     max_number = len(A) + 1
     expected_number = (max_number * (max_number + 1) // 2) # // python integer division
-    print('act_sum:', act_sum)
-    print('expected_number:', expected_number)
     return expected_number - act_sum
 
 
