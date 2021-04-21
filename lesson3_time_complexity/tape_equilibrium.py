@@ -4,14 +4,18 @@
 # source: https://app.codility.com/programmers/lessons/3-time_complexity/tape_equilibrium/
 
 def solution(A):
-    n = len(A)
-    z = [] # min value
-    for i in range(1,n):
-        x = sum(A[0:i])
-        y = sum(A[i:n])
-        z.append(abs(x-y))
+    x = A[0]
+    y = sum(A) - A[0]
+    z = abs(x-y)
+    for i in range(1,len(A)-1):
+        x += A[i]
+        y -= A[i]
+        z_new = abs(x-y)
+        if z_new < z:
+            z = z_new
 
-    return min(z), z.index(min(z))+1
+    # return min(z), z.index(min(z))+1
+    return z
 
 A = [3,1,2,4,3]
 print(solution(A))
