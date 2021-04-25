@@ -4,20 +4,9 @@
 # source: https://app.codility.com/programmers/lessons/2-arrays/cyclic_rotation/
 
 def solution(A,K):
-    n = len(A)
-    A_rotated = []
-    if n == 1:
-        A_rotated = A
-    elif K > n:
-        KN = (K % n)
-        # print(K%n)
-        new_left = A[-KN:n]
-        shifted = A[0:n-KN]
-        A_rotated = new_left+shifted
-    else:
-        new_left = A[-K:n]
-        shifted = A[0:n-K]
-        A_rotated = new_left+shifted
+    A_rotated = [None] * len(A)
+    for i in range(len(A)):
+        A_rotated[(i+K)%len(A)] = (A[i])
 
     return A_rotated
 
