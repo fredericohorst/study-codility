@@ -1,7 +1,6 @@
 
-# COUNTING ELEMENTS - MAX COUNTERS PROBLEM @ codility lessons
+# COUNTING ELEMENTS - FROG RIVER ONE PROBLEM @ codility lessons
 # by Frederico Horst
-# source: https://app.codility.com/programmers/lessons/4-counting_elements/max_counters/
 
 def solution(X, A):
     river_positions = [False] * (X + 1)
