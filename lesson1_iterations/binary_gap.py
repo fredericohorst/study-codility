@@ -29,13 +29,13 @@ def solution(N):
         # print('dist_local', dist_local)
         # print('dist_max', dist_max)
     # if first_rest1 == 0: dist_max = 0 # ?
-    return x,r,dist_local, dist_max
-    # return dist_max
+    # return x,r,dist_local, dist_max
+    return dist_max
 
 
 
-# print('529',solution(529))
-# print('9',solution(9))
-# print('32',solution(32))
-# print('246',solution(246))
+print('529',solution(529))
+print('9',solution(9))
+print('32',solution(32))
+print('246',solution(246))
 print('1041',solution(1041))
